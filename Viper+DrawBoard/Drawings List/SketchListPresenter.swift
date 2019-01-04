@@ -25,7 +25,9 @@ extension SketchListPresenter: SketchListPresenterProtocol {
         
     }
     
-    
+    func showNewSketchView(from view: UIViewController) {
+        wireFrame?.pushToNewSketch(from: view)
+    }
 }
 
 

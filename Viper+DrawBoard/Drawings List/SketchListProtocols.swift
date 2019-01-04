@@ -21,6 +21,7 @@ protocol SketchListPresenterProtocol {
     
     func viewDidLoad()
     func showSketchSelection(_ sketch: Sketch, from view: UIViewController)
+    func showNewSketchView(from view: UIViewController)
 }
 
 protocol SketchListInputInteractorProtocol {

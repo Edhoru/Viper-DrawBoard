@@ -32,7 +32,8 @@ class SketchListWireFrame: SketchListWireFrameProtocol {
     }
     
     func pushToNewSketch(from view: UIViewController) {
-        fatalError("pushToNewSketch")
+        let sketchVC = SketchBoardViewController()
+        view.navigationController?.pushViewController(sketchVC, animated: true)
     }
     
 }

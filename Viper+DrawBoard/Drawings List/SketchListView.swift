@@ -30,6 +30,15 @@ class SketchListView: UIViewController {
         
         setupProperties()
         setupSubViews()
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        let button = UIBarButtonItem(title: "New",
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(newSketchButtonTapped))
+        self.navigationItem.rightBarButtonItem = button
     }
     
     private func setupProperties() {
@@ -38,13 +47,17 @@ class SketchListView: UIViewController {
     }
     
     private func setupSubViews() {
+        
         view.addSubview(collectionView)
         
         collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
+    }
+    
+    @objc func newSketchButtonTapped() {
+        presenter?.showNewSketchView(from: self)
     }
 }
 
