@@ -8,13 +8,13 @@
 
 import UIKit
 
+// Presenter -> View
 protocol SketchListViewProtocol: class {
-    // Presenter -> View
     func showSketchs(with sketchs: [SketchViewModel])
 }
 
+//View -> Presenter
 protocol SketchListPresenterProtocol {
-    //View -> Presenter
     var interactor: SketchListInputInteractorProtocol? {get set}
     var view: SketchListViewProtocol? {get set}
     var wireFrame: SketchListWireFrameProtocol? {get set}
@@ -24,21 +24,21 @@ protocol SketchListPresenterProtocol {
     func showNewSketchView(from view: UIViewController)
 }
 
+//Presenter -> Interactor
 protocol SketchListInputInteractorProtocol {
-    //Presenter -> Interactor
     var presenter: SketchListOutputInteractorProtocol? {get set}
     
     func getSketchList()
 }
 
+//Interactor -> Presenter
 protocol SketchListOutputInteractorProtocol: class {
-    //Interactor -> Presenter
     func sketchListDidFetch(sketchList: [Sketch])
 }
 
+//Presenter -> WireFrame
 protocol SketchListWireFrameProtocol {
-    //Presenter -> WireFrame
+    static func createSketchListModule() -> UIViewController
     func pushToSketchDetail(_ sketch: Sketch, from view: UIViewController)
     func pushToNewSketch(from view: UIViewController)
-    static func createSketchListModule() -> UIViewController
 }

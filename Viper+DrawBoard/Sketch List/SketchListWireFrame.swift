@@ -32,8 +32,8 @@ class SketchListWireFrame: SketchListWireFrameProtocol {
     }
     
     func pushToNewSketch(from view: UIViewController) {
-        let sketchVC = SketchBoardViewController()
-        view.navigationController?.pushViewController(sketchVC, animated: true)
+        let sketchBoard = SketchBoardWireFrame.createSketchBoardModule()
+        view.navigationController?.pushViewController(sketchBoard, animated: true)
     }
     
 }
