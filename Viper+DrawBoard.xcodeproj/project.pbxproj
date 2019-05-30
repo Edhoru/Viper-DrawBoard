@@ -59,6 +59,9 @@
 		4637427321DF36F300198481 /* SketchBoardWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637427221DF36F300198481 /* SketchBoardWireFrame.swift */; };
 		4637427421DF36F300198481 /* SketchBoardWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637427221DF36F300198481 /* SketchBoardWireFrame.swift */; };
 		4637427521DF36F300198481 /* SketchBoardWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637427221DF36F300198481 /* SketchBoardWireFrame.swift */; };
+		4637427821DF3C5700198481 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637427721DF3C5700198481 /* Canvas.swift */; };
+		4637427921DF3C5700198481 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637427721DF3C5700198481 /* Canvas.swift */; };
+		4637427A21DF3C5700198481 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637427721DF3C5700198481 /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,7 @@
 		4637426921DF2E4200198481 /* SketchBoardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchBoardProtocols.swift; sourceTree = "<group>"; };
 		4637426D21DF365A00198481 /* SketchBoardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchBoardPresenter.swift; sourceTree = "<group>"; };
 		4637427221DF36F300198481 /* SketchBoardWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchBoardWireFrame.swift; sourceTree = "<group>"; };
+		4637427721DF3C5700198481 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 			children = (
 				4637426921DF2E4200198481 /* SketchBoardProtocols.swift */,
 				4637426121DEE31100198481 /* SketchBoardView.swift */,
+				4637427621DF3C3F00198481 /* Subviews */,
 				4637426521DF2E2400198481 /* SketchBoardInteractor.swift */,
 				4637426D21DF365A00198481 /* SketchBoardPresenter.swift */,
 				4637427221DF36F300198481 /* SketchBoardWireFrame.swift */,
@@ -254,6 +259,14 @@
 			children = (
 			);
 			path = SketchBoardEntities;
+			sourceTree = "<group>";
+		};
+		4637427621DF3C3F00198481 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				4637427721DF3C5700198481 /* Canvas.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +405,7 @@
 				4637426221DEE31100198481 /* SketchBoardView.swift in Sources */,
 				463741F621DEAEF700198481 /* AppDelegate.swift in Sources */,
 				4637424021DEC0ED00198481 /* SketchListWireFrame.swift in Sources */,
+				4637427821DF3C5700198481 /* Canvas.swift in Sources */,
 				4637422521DEB70900198481 /* Car.swift in Sources */,
 				4637425121DEC66100198481 /* Sketch.swift in Sources */,
 				4637426E21DF365A00198481 /* SketchBoardPresenter.swift in Sources */,
@@ -412,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4637424521DEC1A200198481 /* SketchListProtocols.swift in Sources */,
+				4637427921DF3C5700198481 /* Canvas.swift in Sources */,
 				4637425621DEC76700198481 /* SketchListPresenter.swift in Sources */,
 				4637425A21DECFC900198481 /* SketchViewModel.swift in Sources */,
 				4637426F21DF365A00198481 /* SketchBoardPresenter.swift in Sources */,
@@ -435,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4637424621DEC1A200198481 /* SketchListProtocols.swift in Sources */,
+				4637427A21DF3C5700198481 /* Canvas.swift in Sources */,
 				4637425721DEC76700198481 /* SketchListPresenter.swift in Sources */,
 				4637425B21DECFC900198481 /* SketchViewModel.swift in Sources */,
 				4637427021DF365A00198481 /* SketchBoardPresenter.swift in Sources */,

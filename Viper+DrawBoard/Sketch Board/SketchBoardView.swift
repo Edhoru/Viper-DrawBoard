@@ -12,12 +12,20 @@ class SketchBoardView: UIViewController {
     
     var presenter: SketchBoardPresenterProtocol?
     var sketch: SketchViewModel?
+    let canvas: Canvas = {
+        let canvas = Canvas()
+        canvas.translatesAutoresizingMaskIntoConstraints = false
+        canvas.backgroundColor = .white
+        return canvas
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter?.viewDidLoad()
+        
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
 }
@@ -26,8 +34,20 @@ class SketchBoardView: UIViewController {
 extension SketchBoardView: SketchBoardViewProtocol {
     
     func displaySketchBoard(with sketch: SketchViewModel?) {
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        
+        setupSubviews()
+    }
+    
+    private func setupSubviews() {
+        view.addSubview(canvas)
+        
+        canvas.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        canvas.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        canvas.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        canvas.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
 }
+
 
